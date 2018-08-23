@@ -18,18 +18,18 @@
 $(call inherit-product, device/moto/potter/full_potter.mk)
 
 # Inherit some common DU stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+$(call inherit-product, vendor/screwd/main.mk)
+
+$(call inherit-product, vendor/screwd/configs/caf_required.mk)
 
 # TWRP theme
 TW_THEME := portrait_hdpi
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
-PRODUCT_NAME := du_potter
+PRODUCT_NAME := screwd_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto G5 Plus"
